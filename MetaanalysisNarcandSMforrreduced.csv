@@ -1,0 +1,47 @@
+Sample,Study,Published,Authors,Year,Notes,Study,N,Sample Type,Country,Mean Age,%Male,%Caucasion,Effect Size,Platform,Measure of Narcissism,Type of NPI measure,Type of Narcissism,Type,Time Spent,Freq Status Updates/Tweets,Friends/Followers,Selfies
+54,32,Yes,Barry et al.,2015,,1,128,Undergraduate,US/Canada,20.46,15,60,r,Instagram,NPI40,Objective,Grandiose,Objective,,,,0.01
+55,32,Yes,Barry et al.,2015,,1,128,Undergraduate,US/Canada,20.46,15,60,r,Instagram,PNI,Objective,Vulnerable,Objective,,,,0.12
+29,19,No,Seto,2012,,1,175,Undergraduate,US/Canada,19.2,16,62.3,r,Facebook,NPI40,Self-Report,Grandiose,Self-Report,,0.17,0.2,
+46,28,No,McCain et al.,2015,,2,491,Undergraduate,US/Canada,18.87,21.4,,r,Instagram,NPI13,Self-Report,Grandiose,Objective,,,0.12,0.02
+47,28,No,McCain et al.,2015,,2,491,Undergraduate,US/Canada,18.87,21.4,,r,Instagram,HSNS,Self-Report,Vulnerable,Objective,,,-0.04,0.05
+36,26,Yes,"Deters, Mehl, & Eid ",2014,,2a,209,Undergraduate,European,23.49,22,,r,Facebook,German NPI15,Self-Report,Grandiose,Objective,,0.1,,
+21,13,Yes,"Skues, Williams, & Wise",2012,Weird sample?,1,393,Undergraduate,Australia,20.59,24,,r,Facebook,NPI16,Self-Report,Grandiose,Self-Report,-0.09,,-0.21,
+34,24,Yes,"Alloway, Runac, Quershi, & Kemp",2014,,1,410,Undergraduate,US/Canada,34,25,73.6,r,Facebook,NPI16,Self-Report,Grandiose,Self-Report,,,,
+15,10,Yes,"Panek, Nardis, & Konrath",2013,has NPI subscales if we need it,1,486,Undergraduate,US/Canada,18.8,26,,r,Facebook,NPI16,Self-Report,Grandiose,Self-Report,0.06,0.09,,
+16,10,Yes,"Panek, Nardis, & Konrath",2013,,1,486,Undergraduate,US/Canada,18.8,26,,r,Twitter,NPI16,Self-Report,Grandiose,Self-Report,0.08,,,
+56,33,Yes,Chen,2014,,1,209,Internet,US/Canada,19.93,28.7,76.6,r,Facebook,NPI16,Self-Report,Grandiose,Self-Report,0.06,,0.31,
+33,23,Yes,Pettijohn et al. ,2012,,1,200,Undergraduate,US/Canada,19.98,35,80,r,Facebook,NPI16,Self-Report,Grandiose,Self-Report,0.09,,0.25,
+48,29,No,Weiser,2015,,1,1204,Mturk,US/Canada,32.81,35,75,r,All,NPI40,Self-Report,Grandiose,Self-Report,0.12,0.18,,0.32
+10,6,Yes,"McKenney, Kelly, & Duran",2012,,1,233,Undergraduate,US/Canada,19.77,38,86.6,r,Facebook,NPI40,Self-Report,Grandiose,Self-Report,,,0.16,0.12
+11,6,Yes,"McKenney, Kelly, & Duran",2012,Other focused Is following tweets,1,233,Undergraduate,US/Canada,19.77,38,86.6,r,Twitter,NPI40,Self-Report,Grandiose,Self-Report,,0.26,0.04,
+24,16,No,Schwartz,2010,,1,218,Undergraduate,US/Canada,21,39.4,,r,Facebook,NPI16,Self-Report,Grandiose,Self-Report,0.05,0.06,0.2,
+14,9,Yes,Ong et al.,2011,,1,275,Adolescent,Asian,14.18,40,0%,r,Facebook,NPQCR,Self-Report,Grandiose,Self-Report,,0.19,0.21,0.08
+4,3,Yes,Davenport et al.,2014,,1,515,Undergraduate,US/Canada,20.75,40,90.7,r,Facebook,NPI40,Self-Report,Grandiose,Self-Report,,0.07,0.24,
+5,3,Yes,Davenport et al.,2014,,1,515,Undergraduate,US/Canada,20.75,40,90.7,r,Twitter,NPI40,Self-Report,Grandiose,Self-Report,,0.18,0.22,
+32,22,Yes,Winter et al. ,2014,,1,172,Undergraduate,European,25.95,41,,r,Facebook,NPI16,Self-Report,Grandiose,Mixed,,0.26,0.3,
+25,17,Yes,Huling,2011,,1,381,Undergraduate,US/Canada,19,42,,,Facebook,NPI16,Self-Report,Grandiose,Self-Report,,0,,
+26,17,Yes,Huling,2011,,1,381,Undergraduate,US/Canada,19,42,,,Facebook,HSNS,Self-Report,Vulnerable,Self-Report,,-0.01,,
+17,10,Yes,"Panek, Nardis, & Konrath",2013,,2,93,Mturk,US/Canada,35.2,42,79,r,Facebook,NPI40,Self-Report,Grandiose,Self-Report,,,,
+18,10,Yes,"Panek, Nardis, & Konrath",2013,,2,93,Mturk,US/Canada,35.2,42,79,r,Twitter,NPI40,Self-Report,Grandiose,Self-Report,,0.27,,
+50,31,Yes,Brailovskaia & Bierhoff,2015,,1,122,Internet,European,23.33,43,,r,Facebook,NPI40,Self-Report,Grandiose,Self-Report,,0.6,0.54,
+52,31,Yes,Brailovskaia & Bierhoff,2015,,2,122,Internet,European,23.33,43,,r,Facebook,NIR,Self-Report,Vulnerable,Self-Report,,0.56,0.46,
+30,20,Yes,Garcia & Sikstrom,2014,,1,304,Mturk,US/Canada,26.4,43,,r,Facebook,NPI16,Self-Report,Grandiose,Mixed,0.04,0.04,0.18,
+62,38,No,Weiss,2013,,1,171,Undergraduate,US/Canada,21,44,48,r,Facebook,NPI16,Self-Report,Grandiose,Self-Report,0.06,0.06,,
+38,26,Yes,"Deters, Mehl, & Eid ",2014,,2b,153,Undergraduate,European,20.18,45,,r,Facebook,NPI16,Self-Report,Grandiose,Objective,,,,
+6,3,Yes,Davenport et al.,2014,,2,699,Mturk,US/Canada,32.54,45,78.6,r,Facebook,NPI40,Self-Report,Grandiose,Self-Report,,0.15,0.23,
+7,3,Yes,Davenport et al.,2014,,2,699,Mturk,US/Canada,32.54,45,78.6,r,Twitter,NPI40,Self-Report,Grandiose,Self-Report,,0.18,0.08,
+57,34,Yes,Lee et al. ,2014,,1,236,Undergraduate,Asian,20.6,45.8,,r,Facebook,NARQ,Self-Report,Grandiose,Self-Report,0.088,0.21,,
+19,11,Yes,Poona & Leung,2011,,1,344,Internet,Asian,23,47.4,,,All ,5 NPI Items,Self-Report,Grandiose,Self-Report,0.17,,,
+51,31,Yes,Brailovskaia & Bierhoff,2015,,1,72,Internet,Russian,25.18,49,,r,Facebook,NPI40,Self-Report,Grandiose,Self-Report,,0.73,0.56,
+53,31,Yes,Brailovskaia & Bierhoff,2015,,2,72,Internet,Russian,25.18,49,,r,Facebook,NIR,Self-Report,Vulnerable,Self-Report,,0.71,0.46,
+60,36,Yes,Krcmar et al.,2015,,1,381,Adolescent,European,15.64,49.7,,r,Facebook,Leung NPI,Self-Report,Grandiose,Self-Report,,,0.12,
+61,37,No,Kojouri,2015,,1,218,Adolescent,European,14.6,50,,r,Facebook,NPI40,Self-Report,Grandiose,Self-Report,0.03,0.02,0.19,
+12,7,Yes,Mehdizedah,2010,,1,100,Undergraduate,US/Canada,22.21,50,,r,Facebook,NPI16,Self-Report,Grandiose,Mixed,0.61,,,
+42,28,No,McCain et al.,2015,,1,348,Mturk,US/Canada,31.85,51,78,r,Instagram,NPI13,Self-Report,Grandiose,Self-Report,,,0.24,0.13
+43,28,No,McCain et al.,2015,,1,348,Mturk,US/Canada,31.85,51,78,r,Instagram,HSNS,Self-Report,Vulnerable,Self-Report,,,0,0.01
+1,1,Yes,Bergman et al. ,2011,,1,374,Undergraduate,US/Canada,20.77,53.6,93.2,r,All,NPI40,Self-Report,Grandiose,Self-Report,0.06,0.06,0.24,0.14
+28,18,Yes,Horton et al.,2014,,2,218,Undergraduate,US/Canada,19.63,65,51.6,r,Facebook,NPI16,Self-Report,Grandiose,Self-Report,0.18,,0.02,
+27,18,Yes,Horton et al.,2014,,1,88,Undergraduate,US/Canada,19.76,100,80,r,Facebook,NPI16,Self-Report,Grandiose,Self-Report,0.19,,0.24,
+49,30,Yes,Walters & Horton,2015,,1,83,Undergraduate,European,20.5,100,90,r,Facebook,NPI16,Self-Report,Grandiose,Self-Report,-0.03,,,
+35,25,Yes,Fox & Rooney,2015,,1,800,Internet,US/Canada,29.29,100,73.1,r,All,Dirty Dozen,Self-Report,Grandiose,Self-Report,0.19,,,0.19
+22,14,Yes,Sumner Byers & Boochever,2012,Dark Triad Narcissism,1,2927,Internet,All,,,,r,Twitter,SD3,Self-Report,Grandiose,Objective,,,0.16,

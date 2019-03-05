@@ -1,0 +1,19 @@
+Sample,Study,Published,Authors,Year,Notes,Study,N,Sample Type,Country,Mean Age,%Male,%Caucasion,Effect Size,Platform,Measure of Narcissism,Type of NPI measure,Type of Narcissism,Mean NPI,NPI Alpha,Type,Time Spent,Timep,Freq Status Updates/Tweets,Statusp,Friends/Followers,Friendsp,Selfies,Selfiesp
+1,1,Yes,Bergman et al. ,2011,,1,374,Undergraduate,US/Canada,20.77,53.6,93.2,r,All,NPI-40,Self-Report,Grandiose,17.4,0.85,Self-Report,0.06,0.25,0.06,0.25,0.24,0,0.14,0.01
+12,7,Yes,Mehdizedah,2010,,1,100,Undergraduate,US/Canada,22.21,50,,r,Facebook,NPI-16,Self-Report,Grandiose,8.21,0.72,Mixed,0.61,0,,,,,,
+15,10,Yes,"Panek, Nardis, & Konrath",2013 (1 FB),has NPI subscales if we need it,1,486,Undergraduate,US/Canada,18.8,26,,r,Facebook,NPI-16,Self-Report,Grandiose,3.97,0.85,Self-Report,0.06,0.19,0.09,0.05,,,,
+16,10,Yes,"Panek, Nardis, & Konrath",2013 (1 Twitter),,1,486,Undergraduate,US/Canada,18.8,26,,r,Twitter,NPI-16,Self-Report,Grandiose,3.97,0.85,Self-Report,0.08,0.08,,,,,,
+19,11,Yes,Poona & Leung,2011,,1,344,Internet,Asian,,47.4,,,All ,5 NPI Items,Self-Report,Grandiose,,,Self-Report,0.17,0.002,,,,,,
+21,13,Yes,"Skues, Williams, & Wise",2012,Weird sample?,1,393,Undergraduate,Australia,20.59,24,,r,Facebook,NPI-16,Self-Report,Grandiose,1.71,,Self-Report,-0.09,0.07,,,-0.21,0,,
+24,16,No,Schwartz,2010,,1,218,Undergraduate,US/Canada,21,39.4,,r,Facebook,NPI-16,Self-Report,Grandiose,,,Self-Report,0.05,0.46,0.06,0.38,0.2,0.003,,
+27,18,Yes,Horton et al.,2014 (1),,1,88,Undergraduate,US/Canada,19.76,100,80,r,Facebook,NPI-16,Self-Report,Grandiose,4.44,0.89,Self-Report,0.19,0.08,,,0.24,0.02,,
+28,18,Yes,Horton et al.,2014 (2),,2,218,Undergraduate,US/Canada,19.63,65,51.6,r,Facebook,NPI-16,Self-Report,Grandiose,,,Self-Report,0.18,0.01,,,0.02,0.77,,
+30,20,Yes,Garcia & Sikstrom,2014,,1,304,Mturk,US/Canada,26.4,43,,r,Facebook,NPI-16,Self-Report,Grandiose,5.94,0.75,Mixed,0.04,0.49,0.04,0.49,0.18,0.002,,
+33,23,Yes,Pettijohn et al. ,2012,,1,200,Undergraduate,US/Canada,19.98,35,80,r,Facebook,NPI-16,Self-Report,Grandiose,,,Self-Report,0.09,0.21,,,0.25,0.03,,
+35,25,Yes,Fox & Rooney,2015,,1,800,Internet,US/Canada,29.29,100,73.1,r,All,Dirty Dozen,Self-Report,Grandiose,,,Self-Report,0.19,0,,,,,0.19,0
+48,29,Yes,Weiser,2015,,1,1204,Mturk,US/Canada,32.81,35,75,r,All,NPI-40,Self-Report,Grandiose,12.79,0.88,Self-Report,0.12,0,0.18,0,,,0.32,0
+49,30,Yes,Walters & Horton,2015,,1,83,Undergraduate,European,20.5,100,90,r,Facebook,NPI-16,Self-Report,Grandiose,,,Self-Report,-0.03,0.05,,,,,,
+56,33,Yes,Chen,2014,,1,209,Internet,US/Canada,19.93,28.7,76.6,r,Facebook,NPI-16,Self-Report,Grandiose,4.51,0.82,Self-Report,0.06,,,,0.31,,,
+57,34,Yes,Lee et al. ,2014,,1,236,Undergraduate,Asian,20.6,45.8,,r,Facebook,NARQ,Self-Report,Grandiose,,,Self-Report,0.088,,0.21,,,,,
+61,37,No,Kojouri,2015,,1,218,Adolescent,European,14.6,50,,r,Facebook,NPI-40,Self-Report,Grandiose,,,Self-Report,0.03,,0.02,,0.19,,,
+62,38,No,Weiss,2013,,1,171,Undergraduate,US/Canada,21,44,48,r,Facebook,NPI-16,Self-Report,Grandiose,,,Self-Report,0.06,,0.06,,,,,
