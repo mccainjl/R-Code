@@ -23,7 +23,7 @@ head(ratings1Zachwide)
 #The datasets we pulled from qualtrics do not have participant IDs as the selfies, but rather a set of urls referring to the pictures on qualtrics.  
 #In order to match up selfies with who they belong to, I used a separate .csv with the URLS and the participant IDs matched up.
 
-selfieurls<-read.csv(file="selfieurls.csv",header=FALSE,col.names=c("Url","address","Subject","Pictureletter"))
+selfieurls<-read.csv(file="selfieurls.csv",header=FALSE,col.names=c("Url","Subject","Pictureletter"))
 
 #I then took a slice from the URLs file to create an ID variable for the ratings file.
 
@@ -51,6 +51,7 @@ head(ratings1Nevillwide)
 ratings1Nevillwide$Subject<-selfieurls$Subject[1:188]
 ratings1Nevillwide$Pictureletter<-selfieurls$Pictureletter[1:188]
 
+detach(ratings1Nevill)
 #We then can repeat the above for Zach and Nevill's ratings for group 2.
 
 #Zachs ratings for 2
@@ -96,57 +97,33 @@ detach(ratings2Nevill)
 
 
 
-#Consolidating
+#Consolidating into one dataframe
 
 df1<-data.frame(ratings1Zachwide,ratings1Nevillwide)
 df2<-data.frame(ratings2Zachwide,ratings2Nevillwide)
 
 ratings<-rbind(df1,df2)
 
-
-#colnames(ratings)                
-
-#data reduction
+#data reduction down to just the ratings
 
 ratingsreduced <- ratings[c(1,21,24,27,30,33,36,39,42,45,48,51,75,78,81,84,87,90,93,96,99,102,105,107:108)]
-ratingsreduced[c(2:23),]<-as.numeric(sapply(ratingsreduced[c(2:23),],as.character))
 
 detach(ratings)
 attach(ratingsreduced)
 #View(ratings)
 
-narcissistic<-(ZachRating.Q2_1+NevillRating.Q2_1)/2
-selfesteem<-(ZachRating.Q2_2+NevillRating.Q2_2)/2
-likeable<-(ZachRating.Q2_3+NevillRating.Q2_3)/2
-attractive<-(ZachRating.Q2_4+NevillRating.Q2_4)/2
-status<-(ZachRating.Q2_5+NevillRating.Q2_5)/2
-intelligent<-(ZachRating.Q2_6+NevillRating.Q2_6)/2
-kind<-(ZachRating.Q2_7+NevillRating.Q2_7)/2
-caring<-(ZachRating.Q2_8+NevillRating.Q2_8)/2
-warm<-(ZachRating.Q2_9+NevillRating.Q2_9)/2
-friendly<-(ZachRating.Q2_10+NevillRating.Q2_10)/2
-driven<-(ZachRating.Q2_11+NevillRating.Q2_11)/2
+#Calculating mean scores of each rating by averaging the ratings from both judges
 
+ratingsreduced$narcissistic<-rowMeans(sapply(ratingsreduced[c(2,13),],as.numeric),na.rm = TRUE)
+ratingsreduced$selfesteem<-rowMeans(sapply(ratingsreduced[c(3,14),],as.numeric),na.rm = TRUE)
+ratingsreduced$likeable<-rowMeans(sapply(ratingsreduced[c(4,15),],as.numeric),na.rm = TRUE)
+ratingsreduced$attractive<-rowMeans(sapply(ratingsreduced[c(5,16),],as.numeric),na.rm = TRUE)
+ratingsreduced$status<-rowMeans(sapply(ratingsreduced[c(6,17),],as.numeric),na.rm = TRUE)
+ratingsreduced$intelligent<-rowMeans(sapply(ratingsreduced[c(7,18),],as.numeric),na.rm = TRUE)
+ratingsreduced$kind<-rowMeans(sapply(ratingsreduced[c(8,19),],as.numeric),na.rm = TRUE)
+ratingsreduced$caring<-rowMeans(sapply(ratingsreduced[c(9,20),],as.numeric),na.rm = TRUE)
+ratingsreduced$warm<-rowMeans(sapply(ratingsreduced[c(10,21),],as.numeric),na.rm = TRUE)
+ratingsreduced$friendly<-rowMeans(sapply(ratingsreduced[c(11,22),],as.numeric),na.rm = TRUE)
+ratingsreduced$driven<-rowMeans(sapply(ratingsreduced[c(12,23),],as.numeric),na.rm = TRUE)
 
-#ICC's
-library(irr)
-?icc()
-colnames(ratings)
-#ratingscomplete<-ratings[]
-icc(t(ratings7[complete.cases(ratings7[,c(8,53)]),c(8,53)]))
-icc(t(ratings5[complete.cases(ratings5[,c(9,54)]),c(9,54)]))
-icc(t(ratings[complete.cases(ratings[,c(10,55)]),c(10,55)]))
-icc(t(ratings[complete.cases(ratings[,c(11,56)]),c(11,56)]))
-icc(t(ratings7[complete.cases(ratings7[,c(12,57)]),c(12,57)]))
-icc(t(ratings[complete.cases(ratings[,c(13,58)]),c(13,58)]))
-icc(t(ratings[complete.cases(ratings[,c(14,59)]),c(14,59)]))
-icc(t(ratings[complete.cases(ratings[,c(15,60)]),c(15,60)]))
-icc(t(ratings[complete.cases(ratings[,c(16,61)]),c(16,61)]))
-icc(t(ratings[complete.cases(ratings[,c(17,62)]),c(17,62)]))
-icc(t(ratings[complete.cases(ratings[,c(18,63)]),c(18,63)]))
-icc(t(ratings[complete.cases(ratings[,c(19,64)]),c(19,64)]))
-icc(t(ratings[complete.cases(ratings[,c(20,65)]),c(20,65)]))
-icc(t(ratings[complete.cases(ratings[,c(21,66)]),c(21,66)]))
-icc(t(ratings[complete.cases(ratings[,c(22,67)]),c(22,67)]))
-icc(t(ratings[complete.cases(ratings[,c(23,68)]),c(23,68)]))
-
+#Now our dataset of ratings is ready to be merged with and correlated to the self-reported personality data in the other dataset (not included)
