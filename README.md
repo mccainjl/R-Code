@@ -1,6 +1,6 @@
 # "# R-Code" 
 
-This repository showcases several research projects I undertook using R while earning my Ph.D. in psychology at the University of Georgia.  InstagramSelfieRatings.R, Comps.R, and IRT.R are each r script files, which can be opened in a client like RStudio to run the code and conduct the analyses.  You would first want to install R (https://www.r-project.org/) and/or RStudio (https://www.rstudio.com/products/rstudio/download/), then open the script file and/or paste the code from that file to run it in your R console.  NOTE: First thing before you run each file, you should change the working directory in the function setwd() to the directory on your computer where you downloaded this repo.  That way, it can access the files in this folder.
+This repository showcases several research projects I undertook using R while earning my Ph.D. in psychology at the University of Georgia.  InstagramSelfieRatings.R, Comps.R, IRT.R, and EFAandCFA.R are each r script files, which can be opened in a client like RStudio to run the code and conduct the analyses.  You would first want to install R (https://www.r-project.org/) and/or RStudio (https://www.rstudio.com/products/rstudio/download/), then open the script file and/or paste the code from that file to run it in your R console.  NOTE: First thing before you run each file, you should change the working directory in the function setwd() to the directory on your computer where you downloaded this repo.  That way, it can access the files in this folder.
 
 ## InstagramSelfieRatings.R:
 
@@ -14,7 +14,7 @@ The story of this project is a data management nightmare.  After Facebook forbad
 
 ### The Solution: 
 
-The included R script shows how I solved this problem using a subset of the data, using 11 ratings per selfie for two of the judges' ratings (i.e., four datasets).  The data came in long format with each rating as a row, so I had to reshape each first to wide format, where each row represented one selfie with all of the 11 ratings (as well as other comments left by the judges) as columns.  Then I had to put together the data and caculate some intraclass correlations (ICC's) to measure interrater reliability.  
+The included R script shows how I solved this problem using a subset of the data, using 11 ratings per selfie for two of the judges' ratings (i.e., four datasets).  The data came in long format with each rating as a row, so I had to reshape each first to wide format, where each row represented one selfie with all of the 11 ratings (as well as other comments left by the judges) as columns.  Then I had to put together the data and calculate the average rating of each selfie by taking the mean of both raters' scores for each row.
 
 ## Comps.R:
 
@@ -22,4 +22,8 @@ This script file shows me using the metafor package in R to conduct a meta-analy
 
 ## IRT.R:
 
-This script file shows me using Item Response Theory (IRT) to evaluate a relatively new measure of narcissism, the Communal Narcissism Inventory (CNI), that was created using Classical Test Theory methods.  We used preexisting data with permission from a colleague and evaluated the CNI based on standard Classical Test Theory metrics (such as Cronbach's alpha) and then using several IRT models, including the GRM, the GPCM, and the Nominal models.  The results of this analysis were presented as a poster at the Society for Personality and Social Psychology (SPSP) 2016 annual meeting.  
+This script file shows me using Item Response Theory (IRT) to evaluate a relatively new measure of narcissism, the Communal Narcissism Inventory (CNI), that was created using Classical Test Theory methods.  We used preexisting data with permission from a colleague and evaluated the CNI based on standard Classical Test Theory metrics (such as Cronbach's alpha) and then using several IRT models, including the GRM, the GPCM, and the Nominal models, as well as creating item characteristic curves and comparing individual item performance metrics.  The results of this analysis were presented as a poster at the Society for Personality and Social Psychology (SPSP) 2016 annual meeting (which can be found here: https://osf.io/rwn5h/), and suggest that the CNI contains rather extreme items that most people who are not strongly narcissistic won't endorse, making it less informative about nonclinical populations.  
+
+## EFAandCFA.R:
+
+This script file uses the Communal Narcissism data from the IRT exercise to perform exploratory and confirmatory factor analysis on the Communal Narcissism Inventory.  This is mostly to demonstrate how I use the psych and lavaan packages in R to conduct factor analysis.  I discuss my process of comparing fit indices, considering theory and parsimony, and how I would use my judgment to determine the best factor structure for the data.
