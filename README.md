@@ -14,7 +14,7 @@ The story of this project is a data management nightmare.  After Facebook forbad
 
 ### The Solution: 
 
-The included R script shows how I solved this problem using a subset of the data, using 11 ratings per selfie for two of the judges' ratings (i.e., four datasets).  The data came in long format with each rating as a row, so I had to reshape each first to wide format, where each row represented one selfie with all of the 11 ratings (as well as other comments left by the judges) as columns.  Then I had to put together the data and calculate the average rating of each selfie by taking the mean of both raters' scores for each row.
+The included R script shows how I solved this problem using a subset of the data, using 11 ratings per selfie for two (Zach and Nevill) of the judges' ratings (i.e., four datasets).  The data came in long format with each rating as a row, so I had to reshape each first to wide format, where each row represented one selfie with all of the 11 ratings (as well as other comments left by the judges) as columns.  Then I had to put together the data and calculate the average rating of each selfie by taking the mean of both raters' scores for each row.
 
 ## Comps.R:
 
