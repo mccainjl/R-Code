@@ -1,26 +1,50 @@
-#Code for a project for an Item Response Theory analysis of a scale called the Communal Narcissism Inventory.
+#Code for a class project for an Item Response Theory analysis of a scale called the Communal Narcissism Inventory.
 
-IRTdatashort<-read.csv(file="C:/Users/Jessica/OneDrive/CommunalNarcissism/IRTdatashort.csv")
-IRTdata<-read.csv(file="C:/Users/Jessica/OneDrive/CommunalNarcissism/IRTdata.csv")
-diIRT<-read.csv(file="C:/Users/Jessica/OneDrive/CommunalNarcissism/dichotomousirtdata2.csv")
+#Important! Set the directory in the line below to the folder you're working from, i.e., where you downloaded the repo to.
+setwd("C:/Users/wmcla/desktop/repos/R-Code")
+getwd()
+
+#Read in the data:
+
+IRTdata<-read.csv(file="IRTdata.csv")
+
+
+#Obtain and load the necessary libraries
+
+install.packages("CTT")
+install.packages("mirt")
 library(CTT)
+library(mirt)
+
+#Clean up the data, including replacing NA's
+
 summary(IRTdata)
 summary(IRTdatashort)
 IRTdatashort[IRTdatashort==999]<-NA
 IRTdata[IRTdata==999]<-NA
 
-#Reliability
-diirtjust<-diIRT[1:16]
+#Reliability according to classical test theory, aka Cronbach's alpha
 
-str(reliability(diirtjust),vector.len=1000)
-reliability(IRTdata,output.scored=TRUE)
+reliability(IRTdata)
+
+
+#Calculating a total score and creating a separate dataset that has the total score included as a column. 
+#this scale, luckily, contains no reverse scored items to worry about
+
 CNItotal<-rowSums(IRTdata,na.rm=T)
 IRTscored<-data.frame(IRTdata,CNItotal)
-?reliability()
-CNIrel<-reliability(diirtjust)
+
+#It can also help to look at what the alpha would be if each item were deleted.  Ideally, we want to remove items
+#if the alpha would be higher without them.
+
+CNIrel<-reliability(IRTdata)
 CNIrel$bis
 CNIrel$alphaIfDeleted
 CNIrel$itemMean
+
+#We also want to view item characteristic curves, or ICC.  These look at how well each item identifies people at
+#different levels of the overall score (in this case, at different levels of communal narcissism)
+
 
 cttICC(IRTscored$CNItotal,IRTscored$CNI1,plotTitle="ICC for Item 1",xlab="CNI Total Score",ylab="Proportion Correct (p)")
 cttICC(IRTscored$CNItotal,IRTscored$CNI2,plotTitle="ICC for Item 2",xlab="CNI Total Score",ylab="Proportion Correct (p)")
@@ -39,15 +63,11 @@ cttICC(IRTscored$CNItotal,IRTscored$CNI14,plotTitle="ICC for Item 14",xlab="CNI 
 cttICC(IRTscored$CNItotal,IRTscored$CNI15,plotTitle="ICC for Item 15",xlab="CNI Total Score",ylab="Proportion Correct (p)")
 cttICC(IRTscored$CNItotal,IRTscored$CNI16,plotTitle="ICC for Item 16",xlab="CNI Total Score",ylab="Proportion Correct (p)")
 
-frame<cbind(testscores$score,testscores$scored)
 
-lapply(frame,cttICC)
 
-?cttICC()
-
-library(mirt)
-
-#GRM
+#Now we will test the first model, the graded response model, or GRM.  Because our items have ordered categorical scores 
+#(i.e., they were responded to on a seven point likert-type scale), the simpler models, 1PL and 2PL, don't apply here.
+#This model looks at both difficulty of the item and discrimination
 
 cnigrm<-mirt(IRTdata,1,"graded",technical=list(NCYCLES=50000))
 scores<-fscores(cnigrm,method='EAP',full.scores=TRUE,scores.only=TRUE)
@@ -55,26 +75,24 @@ fullIRTdata<-imputeMissing(cnigrm,scores)
 cnigrm<-mirt(fullIRTdata,1,"graded",technical=list(NCYCLES=50000))
 cnigrm
 str(cnigrm)
-is.na(cnigrmshort)
-show(cnigrmshort)
+is.na(cnigrm)
+show(cnigrm)
 
-
-#GPCM
+#Next, we will test the generalized partial credit model, or GPCM
 
 cnigpcm<-mirt(IRTdata,1,"gpcm",technical=list(NCYCLES=50000))
 scores<-fscores(cnigpcm,method='EAP',full.scores=TRUE,scores.only=TRUE)
 fullIRTdatagpcm<-imputeMissing(cnigpcm,scores)
 cnigpcm<-mirt(fullIRTdatagpcm,1,"gpcm",technical=list(NCYCLES=50000))
 
-#Nominal
+#Finally, we will test the Nominal model.  
 
 cninom<-mirt(IRTdata,1,"nominal",technical=list(NCYCLES=50000))
 scores<-fscores(cninom,method='EAP',full.scores=TRUE,scores.only=TRUE)
 fullIRTdatanom<-imputeMissing(cninom,scores)
 cninom<-mirt(fullIRTdatanom,1,"nominal",technical=list(NCYCLES=50000))
 
-library(mirt)
-
+#We can also pull the parameters for each question to find out for which groups of people they are the most discriminating.
 
 coef(cnigrm,IRTpars=TRUE,simplify=TRUE)
 coef(cnigpcm,IRTpars=TRUE,simplify=TRUE)
@@ -83,7 +101,7 @@ coef(cninom,IRTpars=TRUE,simplify=TRUE)
 M2(cnigrm)
 M2(cnigpcm)
 
-#Plots
+#Plots include theta limits and information curves.
 
 plot(cnigrm,theta_lim=c(-3,3))
 plot(cnigpcm,theta_lim=c(-3,3))
@@ -202,21 +220,21 @@ itemplot(cninom,15,type='info',theta_lim=c(-3,3))
 itemplot(cninom,16,type='info',theta_lim=c(-3,3))
 
 
-#Nested testing
+#Nested testing is used to determine which of the three models provide the best model fit.
+#
 
 anova(cnigrm,cnigpcm)
 anova(cnigpcm,cninom)
 anova(cnigrm,cninom)
 
-cnigrm
+#We can also test the fit of the model to each item in the CNI data.
 
-?itemfit()
 itemfit(cnigrm)
 itemfit(cnigpcm)
 itemfit(cninom)
 
 dput(head(IRTdata))
-?dput()
+
 
 citation(package="CTT")
 citation(package="mirt")
