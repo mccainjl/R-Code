@@ -19,8 +19,6 @@ library(mirt)
 #Clean up the data, including replacing NA's
 
 summary(IRTdata)
-summary(IRTdatashort)
-IRTdatashort[IRTdatashort==999]<-NA
 IRTdata[IRTdata==999]<-NA
 
 #Reliability according to classical test theory, aka Cronbach's alpha
